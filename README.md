@@ -79,3 +79,15 @@
 - Devolver un archivo del area staged
 
 * git rm --cached (archivo)
+
+# AGREGAR ARCHIVOS CON COMMIT
+
+- Se suben los archivos "sin un mensaje" (posteriormente nos va a pedir que agreguemos un mensaje y se va a abrir el editor de codigo que hayamos configurado, y para guardar ese mensaje basta con cerrar el editor)
+* git commit
+
+- Se suben los archivos con un mensaje
+* git commit -m "(mensaje del commit)" 
+
+- Subimos todos los archivos aunque no esten en el area de "staging"
+* git commit -a
+
