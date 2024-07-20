@@ -91,3 +91,23 @@
 - Subimos todos los archivos aunque no esten en el area de "staging"
 * git commit -a
 
+# ELIMINAR ARCHIVOS DEL REPOSITORIO
+
+* rm (archivo)
+- De esta manera estamos indicando que queremos eliminar ese archivo pero este cambio tiene que ser subido al area de "staged" por lo cual deberiamos hacer un "commit add (archivo)"
+
+# RESTAURAR UN ARCHIVO BORRADO
+
+- Hay que tener en cuenta que sea un archivo que borramos pero no enviamos el cambio a git, es decir, que el archivo eliminado este en el area de staging y querramos desacer esa eliminacion
+
+* git restore (archivo)
+
+# VOLVER AL ULTIMO CAMBIO
+
+- Si queremos desacer los cambios que hicimos y volver al ultimo commit de un archivo (siempre y cuando no haya un cambio subido al area de stage)
+
+* git checkout (archivo)
+
+- Si lo que queremos es volver si o si al ultimo cambio, descartando si hay algun cambio en el area de stage (esto tambien descarta lo guardado en el area de staging)
+
+* git reset --hard
