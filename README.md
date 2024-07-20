@@ -106,8 +106,29 @@
 
 - Si queremos desacer los cambios que hicimos y volver al ultimo commit de un archivo (siempre y cuando no haya un cambio subido al area de stage)
 
+- Si el archivo existe, lo sobre escribe, pero si no existe lo crea
+
 * git checkout (archivo)
 
 - Si lo que queremos es volver si o si al ultimo cambio, descartando si hay algun cambio en el area de stage (esto tambien descarta lo guardado en el area de staging)
 
 * git reset --hard
+
+# CAMBIAR NOMBRE DE UN ARCHIVO
+
+- Este cambio se agrega directamente al area de staging por lo que tendriamos que hacer un commit y agregar este cambio al repo
+
+* git mv (archivo a cambiar) (nuevo nombre)
+
+# CAMBIAR LA FORMA EN QUE GIT STATUS MUESTRA LOS DATOS
+
+- Mostrarlos de manera resumida
+
+* git status -s
+* git status --short
+
+# VER LO QUE CONTIENE UN ARCHIVO COMMITED
+
+- Muestra lo que contiene el ultimo commit de ese archivo, pero solo los cambios que tiene ese archivo
+
+* git show (archivo)
