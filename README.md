@@ -132,3 +132,7 @@
 - Muestra lo que contiene el ultimo commit de ese archivo, pero solo los cambios que tiene ese archivo
 
 * git show (archivo)
+
+# COMPARAR EL AREA DE STAGED CON LA COMMIT
+
+* git diff --staged
