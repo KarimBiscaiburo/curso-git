@@ -110,10 +110,6 @@
 
 * git checkout (archivo)
 
-- Si lo que queremos es volver si o si al ultimo cambio, descartando si hay algun cambio en el area de stage (esto tambien descarta lo guardado en el area de staging)
-
-* git reset --hard
-
 # CAMBIAR NOMBRE DE UN ARCHIVO
 
 - Este cambio se agrega directamente al area de staging por lo que tendriamos que hacer un commit y agregar este cambio al repo
@@ -135,4 +131,120 @@
 
 # COMPARAR EL AREA DE STAGED CON LA COMMIT
 
+- Lo rojo es lo que esta commited y lo verde lo que se agrego
+
 * git diff --staged
+
+# VER LOS DATOS DE LOS COMMITS
+
+- Nos permite ver "id" del commit, el autor y la fecha
+
+* git log
+* git log --oneline (abreviado)
+
+- Cuando usamos la sentencia abreviada, podemos ver que el "id" del commit es de 7 caracteres (aunque en realidad el id en si es mas largo, solo que se muestra resumido). Esto no seria un problema si la cantidad de commits son poco, pero a medida que se van realizando mas es muy probable que esta id resumida coincida con la de otro commit. Por esto es que a veces deberemos configurar manualmente la cantidad de caracteres resumidos del id del commit que queremos ver:
+
+* git config (scope) core.abbrev (cantidad que queremos en numero)
+
+# VER DIFERENCIAS ENTRE COMMITS
+
+- Es importante tener la configuracion de cantidad de digitos que se muestran cuando hacemos el "git log --oneline" para que cuando pongamos el numero del commit tambien sea de esa cantidad de digitos
+
+- Para ver la diferencia entre 2 commits
+
+* git diff (nro commit) (nro commit)
+
+- Ver el nombre de los archivos que cambiaron en los commits
+
+* git diff --name-only (nro commit) (nro commit)
+
+- Si queremos ver los cambios a nivel de linea
+
+* git diff --word-diff (nro commit) (nro commit)
+
+# MODIFICAR COMMITS
+
+- Se abriria nuestro editor de codigo y podriamos cambiar el nombre del commit en que estemos parados
+
+* git commit --amend
+
+- Modificamos el commit agregando un cambio
+
+Tenemos, primero, que agregar al area de stage lo que querramos cambiar.
+Luego cambiar el nombre del commit y ahi se van a guardar todos los cambios
+
+# MODIFICAR COMMITS QUE NO SON EL ULTIMO
+
+> [!IMPORTANT]
+> Es mas recomendable modificar el ultimo antes que tener que hacer esto
+
+- Primero tenemos que decidir cuantos commits atras queremos volver
+
+* git rebase -i head~(cantidad que queremos volver)
+
+* git commit --ammend
+
+- Cuando hayamos terminado con todos los cambios volvemos al ultimo commit (sin este paso, se pierden todos los ultimos commits)
+
+* git rebase --continue
+
+# DEVOLVER COMMITS AL AREA DE STAGING
+
+- De esta manera estamos posicionando el puntero "HEAD" hacia otro commit anterior y devolviendo esos commits siguientes al area de staging por si queremos usarlos
+
+* git reset --soft (nro commit)
+
+Otra manera de hacer referencia a un commit es indicando cuantos commits atras del HEAD queremos volver 
+
+* git reset --soft head~(cantidad a volver)
+
+# DEVOLVER COMMITS AL AREA DE STAGING Y AL AREA DE TRABAJO
+
+* git reset --mixed (nro commit)
+
+# VOLVER AL ULTIMO COMMIT DESCARTANDO TODO LO ANTERIOR
+
+- Es decir, volvemos al commit que seleccionemos de manera que no quede nada en el area de staging y el area de trabajo va a contener lo de ese commit
+
+* git reset --hard (nro de commit)
+
+
+
+## BRANCHES
+
+# VER RAMAS
+
+* git branch
+
+# CREAR UNA RAMA
+
+* git branch (nombre de la rama "convencion-de-escritura")
+
+# CREAR UNA RAMA Y MOVER EL PUNTERO
+
+* git checkout -b (branch)
+* git switch -c (branch) !RECOMENDADA¡
+
+# CAMBIAR ENTRE RAMAS
+
+* git checkout (branch)
+* git switch (branch) !RECOMENDADA¡
+
+# BORRAR RAMAS
+
+* git branch -d (rama)
+
+> [!IMPORTANT]
+> No tenemos que estar parados en la rama que queremos borrar a la hora de hacerlo
+
+# MODIFICAR RAMAS
+
+- Modificar una rama que no es en la que estas ubicado
+
+* git branch -m (rama a modificar) (nuevo nombre)
+
+- Modificar la rama en la que estoy
+
+* git branch -m (nombre nuevo)
+
+# FUSIONAR RAMAS
