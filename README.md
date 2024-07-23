@@ -19,7 +19,7 @@
 - Vamos a la configuracion, dentro del scope que elijamos, y seleccionamos el nombre del usuario (el scope mas comun es --global)
 * git config --global user.name ("nombre")
 
-> [!NOTA]
+> [!NOTE]
 > El nombre que elijamos tiene que estar entre comillas
 
 - Vamos a la configuracion, dentro del scope que elijamos, y seleccionamos el email del usuario
@@ -38,7 +38,7 @@
 
 * git config --(scope) core.editor ("code --wait")
 
-> [!NOTA]
+> [!NOTE]
 > "code" es el que se usa para el visual studio code (es como una palabra reservada)
 > El --wait sirve para indicar que los cambios no se guarden hasta que se cierre el editor
 
@@ -48,7 +48,7 @@
 
 ### CONFIGURACION DE SALTO DE LINEA
 
-> [!NOTA]
+> [!NOTE]
 > Min 21:50 del curso
 
 - Basicamente esta configuracion lo que hace es automatizar el salto de linea hacia abajo cuando llegamos al limite en una linea (solamente es necesario en Windows) 
@@ -69,7 +69,7 @@
 * git add (nombre archivo)
 * git add . (sube todos los archivos de la carpeta)
 
-> [!NOTA]
+> [!NOTE]
 > Cuando ponemos el nombre del archivo debemos incluir la terminacion, es decir, .js, .css, etc
 
 - Ver estados de los archivos
@@ -176,7 +176,7 @@ Luego cambiar el nombre del commit y ahi se van a guardar todos los cambios
 
 ### MODIFICAR COMMITS QUE NO SON EL ULTIMO
 
-> [!NOTA]
+> [!NOTE]
 > Es mas recomendable modificar el ultimo antes que tener que hacer esto
 
 - Primero tenemos que decidir cuantos commits atras queremos volver
@@ -234,7 +234,7 @@ Otra manera de hacer referencia a un commit es indicando cuantos commits atras d
 
 * git branch -d (rama)
 
-> [!NOTA]
+> [!NOTE]
 > No tenemos que estar parados en la rama que queremos borrar a la hora de hacerlo
 
 ### MODIFICAR RAMAS
@@ -257,7 +257,7 @@ Otra manera de hacer referencia a un commit es indicando cuantos commits atras d
 
 * git reset --hard (nro commit)
 
-> [!NOTA]
+> [!NOTE]
 > Esto funciona igual que como esta explicado anteriormente, si sirve para desacer la fusion de las ramas, pero realmente estamos borrando parte de los cambios que hicimos
 
 ### MERGE CONFLICT
@@ -321,7 +321,7 @@ Otra manera de hacer referencia a un commit es indicando cuantos commits atras d
 * git branch -M main 
 * git push -u origin main
 
-> [!NOTA]
+> [!NOTE]
 > "main" es porque github tiene configurado como rama principal a "main", pero si nosotros lo cambiamos, tambien deberiamos cambiarlo en el comando
 > El "-u" es para que se configure automaticamente para que no tengamos que hacer git push origin main cada vez que querramos subir los cambios
 
