@@ -176,7 +176,7 @@ Luego cambiar el nombre del commit y ahi se van a guardar todos los cambios
 
 ### MODIFICAR COMMITS QUE NO SON EL ULTIMO
 
-> [!IMPORTANT]
+> [!NOTA]
 > Es mas recomendable modificar el ultimo antes que tener que hacer esto
 
 - Primero tenemos que decidir cuantos commits atras queremos volver
@@ -234,7 +234,7 @@ Otra manera de hacer referencia a un commit es indicando cuantos commits atras d
 
 * git branch -d (rama)
 
-> [!IMPORTANT]
+> [!NOTA]
 > No tenemos que estar parados en la rama que queremos borrar a la hora de hacerlo
 
 ### MODIFICAR RAMAS
@@ -257,7 +257,7 @@ Otra manera de hacer referencia a un commit es indicando cuantos commits atras d
 
 * git reset --hard (nro commit)
 
-> [!IMPORTANT]
+> [!NOTA]
 > Esto funciona igual que como esta explicado anteriormente, si sirve para desacer la fusion de las ramas, pero realmente estamos borrando parte de los cambios que hicimos
 
 ### MERGE CONFLICT
@@ -321,7 +321,7 @@ Otra manera de hacer referencia a un commit es indicando cuantos commits atras d
 * git branch -M main 
 * git push -u origin main
 
-> [!IMPORTANT]
+> [!NOTA]
 > "main" es porque github tiene configurado como rama principal a "main", pero si nosotros lo cambiamos, tambien deberiamos cambiarlo en el comando
 > El "-u" es para que se configure automaticamente para que no tengamos que hacer git push origin main cada vez que querramos subir los cambios
 
