@@ -270,7 +270,12 @@ Otra manera de hacer referencia a un commit es indicando cuantos commits atras d
 
 * git merge --continue
 
- 
+### ETIQUETAR RAMAS
+
+- git tag (nombre-tag)
+
+- git tag (solo con este comando vemos todos los tags)
+
 ### GITIGNORE GLOBAL
 
 - Para esto debemos hacer un archivo, en algun lado de la computadora, que sea .gitignore_global (creo que no hace falta que sea "_global") y dentro ponemos lo que nunca vamos a querer que se suba cuando hagamos un commit
@@ -301,11 +306,16 @@ Otra manera de hacer referencia a un commit es indicando cuantos commits atras d
 
 ## GITHUB
 
-### CLONAR UN REPOSITORIO
+### CLONAR UN REPOSITORIO REMOTO A LOCAL
 
 - Primero necesitamos copiar la direccion del repositorio (por lo general se usa es HTTPS)
 
 * git clone (direccion)
+
+### CLONAR UN REPOSITORIO REMOTO DIRECTAMENTE A GITHUB
+
+- Vamos a un repositorio que querramos agregar a nuestra cuenta y seleccionamos la opcion de "Fork"
+- Vamos a tener pasos muy intuitivos para completarlo
 
 ### ACTUALIZAR EL REPOSITORIO LOCAL POR CAMBIOS EN EL REPOSITORIO REMOTO
 
